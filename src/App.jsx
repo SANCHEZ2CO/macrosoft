@@ -206,15 +206,16 @@ export default function App() {
         }
     }, [transcript, listening]);
 
-    const toggleMic = () => {
+    const toggleMic = async () => {
         if (!browserSupportsSpeechRecognition) {
             alert("Tu navegador no soporta reconocimiento de voz. Intenta usar Chrome.");
             return;
         }
 
         if (listening) {
-            SpeechRecognition.stopListening();
-            resetTranscript(); // CRÍTICO: Limpiar texto al apagar para que la UI se cierre
+            // Usamos abortListening para un apagado inmediato y forzoso
+            await SpeechRecognition.abortListening();
+            resetTranscript();
         } else {
             resetTranscript();
             SpeechRecognition.startListening({ language: 'es-CO', continuous: true })
