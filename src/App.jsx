@@ -101,7 +101,27 @@ export default function App() {
     };
 
     // --- 2. LÓGICA DE VOZ AVANZADA (REGEX PARSER) ---
-    const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+    const {
+        transcript,
+        listening,
+        resetTranscript,
+        browserSupportsSpeechRecognition,
+        isMicrophoneAvailable,
+        error
+    } = useSpeechRecognition();
+
+    // Debugging logs
+    useEffect(() => {
+        if (error) {
+            console.error("Speech Recognition Error:", error);
+            alert(`Error de voz: ${error.error || JSON.stringify(error)}`); // Alert user visibly
+        }
+    }, [error]);
+
+    useEffect(() => {
+        console.log("Browser supports speech recognition:", browserSupportsSpeechRecognition);
+        console.log("Microphone available:", isMicrophoneAvailable);
+    }, [browserSupportsSpeechRecognition, isMicrophoneAvailable]);
 
     const handleAdd = (id, qty = 1) => {
         setCart(prev => ({ ...prev, [id]: (prev[id] || 0) + qty }));
@@ -131,6 +151,7 @@ export default function App() {
     const processVoiceCommand = () => {
         if (!transcript) return;
         const lowerTranscript = transcript.toLowerCase();
+        console.log("Procesando comando:", lowerTranscript); // Debug log
 
         const numberPattern = Object.keys(wordToNum).join('|');
         const regex = new RegExp(`(\\d+|${numberPattern})\\s+(.+?)(?=\\s+(\\d+|${numberPattern})|$)`, 'gi');
@@ -171,11 +192,20 @@ export default function App() {
     }, [listening]);
 
     const toggleMic = () => {
+        console.log("Toggle Mic Clicked"); // Debug log
+        if (!browserSupportsSpeechRecognition) {
+            alert("Tu navegador no soporta reconocimiento de voz. Intenta usar Chrome.");
+            return;
+        }
+
         if (listening) {
+            console.log("Stopping listening...");
             SpeechRecognition.stopListening();
         } else {
+            console.log("Starting listening...");
             resetTranscript();
-            SpeechRecognition.startListening({ language: 'es-CO', continuous: true });
+            SpeechRecognition.startListening({ language: 'es-CO', continuous: true })
+                .catch(err => console.error("Error starting speech recognition:", err));
         }
     };
 
