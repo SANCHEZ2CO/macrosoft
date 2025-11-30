@@ -369,6 +369,12 @@ export default function App() {
                         )}
                     </header>
 
+                    {/* DEBUG PANEL - TEMPORARY */}
+                    <div className="bg-black text-green-400 p-2 text-xs font-mono text-center">
+                        DEBUG TRANSCRIPT: {transcript || "(Esperando voz...)"} <br />
+                        Listening: {listening ? "ON" : "OFF"} | Mic: {isMicrophoneAvailable ? "OK" : "Check"}
+                    </div>
+
                     <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
                         <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center gap-3">
