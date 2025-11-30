@@ -148,9 +148,9 @@ export default function App() {
         'quince': 15, 'veinte': 20
     };
 
-    const processVoiceCommand = (isFinal = false) => {
-        if (!transcript) return;
-        const lowerTranscript = transcript.toLowerCase();
+    const processVoiceCommand = (text) => {
+        if (!text) return;
+        const lowerTranscript = text.toLowerCase();
         console.log("Analizando texto:", lowerTranscript);
 
         const numberPattern = Object.keys(wordToNum).join('|');
@@ -189,9 +189,9 @@ export default function App() {
             setLastAdded(itemsFound.join(", "));
             setTimeout(() => setLastAdded(null), 4000);
 
-            // CRÍTICO: Si encontramos algo, limpiamos el transcript para seguir escuchando comandos nuevos
-            resetTranscript();
+            // Only reset if it was a real voice command (we can't easily know here, but the effect handles it)
         }
+        return matchFound;
     };
 
     // Procesar en tiempo real (cada vez que cambia el texto)
@@ -199,24 +199,23 @@ export default function App() {
         if (listening && transcript) {
             // Debounce pequeño para no procesar palabras a medias
             const timer = setTimeout(() => {
-                processVoiceCommand();
+                const found = processVoiceCommand(transcript);
+                if (found) resetTranscript();
             }, 800);
             return () => clearTimeout(timer);
         }
     }, [transcript, listening]);
 
     const toggleMic = () => {
-        console.log("Toggle Mic Clicked"); // Debug log
         if (!browserSupportsSpeechRecognition) {
             alert("Tu navegador no soporta reconocimiento de voz. Intenta usar Chrome.");
             return;
         }
 
         if (listening) {
-            console.log("Stopping listening...");
             SpeechRecognition.stopListening();
+            resetTranscript(); // CRÍTICO: Limpiar texto al apagar para que la UI se cierre
         } else {
-            console.log("Starting listening...");
             resetTranscript();
             SpeechRecognition.startListening({ language: 'es-CO', continuous: true })
                 .catch(err => console.error("Error starting speech recognition:", err));
@@ -482,6 +481,8 @@ export default function App() {
                             </div>
                         </div>
                     )}
+
+
                 </div>
             )}
         </>
