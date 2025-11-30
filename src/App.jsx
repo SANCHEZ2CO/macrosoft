@@ -148,16 +148,18 @@ export default function App() {
         'quince': 15, 'veinte': 20
     };
 
-    const processVoiceCommand = () => {
+    const processVoiceCommand = (isFinal = false) => {
         if (!transcript) return;
         const lowerTranscript = transcript.toLowerCase();
-        console.log("Procesando comando:", lowerTranscript); // Debug log
+        console.log("Analizando texto:", lowerTranscript);
 
         const numberPattern = Object.keys(wordToNum).join('|');
+        // Regex mejorado para capturar comandos completos
         const regex = new RegExp(`(\\d+|${numberPattern})\\s+(.+?)(?=\\s+(\\d+|${numberPattern})|$)`, 'gi');
 
         let match;
         let itemsFound = [];
+        let matchFound = false;
 
         while ((match = regex.exec(lowerTranscript)) !== null) {
             const qtyRaw = match[1];
@@ -174,22 +176,34 @@ export default function App() {
             const productNames = menuData.map(p => p.name.toLowerCase());
             const matches = stringSimilarity.findBestMatch(cleanName, productNames);
 
-            if (matches.bestMatch.rating > 0.35) {
+            // Si la coincidencia es buena, agregamos y marcamos éxito
+            if (matches.bestMatch.rating > 0.45) { // Subimos un poco el umbral para evitar falsos positivos en tiempo real
                 const targetProduct = menuData[matches.bestMatchIndex];
                 handleAdd(targetProduct.id, quantity);
                 itemsFound.push(`${quantity}x ${targetProduct.name}`);
+                matchFound = true;
             }
         }
 
         if (itemsFound.length > 0) {
             setLastAdded(itemsFound.join(", "));
             setTimeout(() => setLastAdded(null), 4000);
+
+            // CRÍTICO: Si encontramos algo, limpiamos el transcript para seguir escuchando comandos nuevos
+            resetTranscript();
         }
     };
 
+    // Procesar en tiempo real (cada vez que cambia el texto)
     useEffect(() => {
-        if (!listening && transcript) processVoiceCommand();
-    }, [listening]);
+        if (listening && transcript) {
+            // Debounce pequeño para no procesar palabras a medias
+            const timer = setTimeout(() => {
+                processVoiceCommand();
+            }, 800);
+            return () => clearTimeout(timer);
+        }
+    }, [transcript, listening]);
 
     const toggleMic = () => {
         console.log("Toggle Mic Clicked"); // Debug log
