@@ -466,12 +466,6 @@ export const menuData = [
     "name": "DESAYUNO CELESTE",
     "ingredients": [
       {
-        "id": "ing_12",
-        "name": "PORCIÓN LECHONA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
         "id": "ing_10",
         "name": "PARFAIT NORMAL",
         "qty": 1,

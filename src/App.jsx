@@ -312,20 +312,45 @@ export default function App() {
         doc.setTextColor(100);
         doc.text(`Generado: ${fecha}`, 14, 30);
 
-        // Tabla
+        // 1. Tabla de Productos (Resumen de Pedidos)
+        const productsSummary = Object.entries(cart).map(([id, qty]) => {
+            const product = menuData.find(p => p.id === id);
+            return product ? [product.name, qty] : null;
+        }).filter(Boolean);
+
+        doc.setFontSize(12);
+        doc.setTextColor(0);
+        doc.text("Resumen de Pedidos:", 14, 40);
+
+        autoTable(doc, {
+            head: [['Producto', 'Cantidad']],
+            body: productsSummary,
+            startY: 45,
+            theme: 'grid',
+            headStyles: { fillColor: [22, 160, 133] }, // Greenish
+            styles: { fontSize: 10, cellPadding: 3 },
+        });
+
+        // 2. Tabla de Insumos
         const tableData = productionList.map(item => [item.nombre, item.total]);
+
+        const finalYProducts = doc.lastAutoTable.finalY || 45;
+
+        doc.setFontSize(12);
+        doc.text("Detalle de Insumos / Producción:", 14, finalYProducts + 10);
 
         autoTable(doc, {
             head: [['Insumo / Actividad', 'Cantidad Total']],
             body: tableData,
-            startY: 35,
+            startY: finalYProducts + 15,
             theme: 'striped',
-            headStyles: { fillColor: [41, 128, 185] },
+            headStyles: { fillColor: [41, 128, 185] }, // Blue
             styles: { fontSize: 10, cellPadding: 3 },
         });
 
         // Pie de página
         const finalY = doc.lastAutoTable.finalY || 40;
+        doc.setFontSize(10);
         doc.text(`Total Desayunos Vendidos: ${totalItems}`, 14, finalY + 10);
 
         doc.save(`produccion_${Date.now()}.pdf`);
@@ -388,7 +413,7 @@ export default function App() {
                             </div>
                             <div className="h-8 w-px bg-gray-600 hidden sm:block"></div>
                             <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2">
-                                <ChefHat className="text-yellow-500" /> KDS <span className="text-gray-500 text-lg font-normal hidden sm:inline">| Producción</span>
+                                <ChefHat className="text-yellow-500" /> S2CO <span className="text-gray-500 text-lg font-normal hidden sm:inline">| Producción</span>
                             </h2>
                         </div>
                         <button
