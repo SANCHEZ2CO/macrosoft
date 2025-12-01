@@ -363,7 +363,10 @@ export default function App() {
             const productoInfo = menuData.find(p => p.id === productId);
             if (!productoInfo) return;
             productoInfo.ingredients.forEach(insumo => {
-                const key = insumo.id;
+                // CORRECCIÓN: Agrupar por NOMBRE, no por ID
+                // Esto soluciona el problema de ingredientes duplicados con diferentes IDs
+                const key = insumo.name.trim().toUpperCase();
+
                 if (!ingredientesTotales[key]) {
                     ingredientesTotales[key] = { nombre: insumo.name, total: 0 };
                 }
