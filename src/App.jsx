@@ -3,7 +3,9 @@ import 'regenerator-runtime/runtime';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import stringSimilarity from 'string-similarity';
 import { menuData } from './data/menuData';
-import { ShoppingCart, ChefHat, Search, ArrowLeft, Trash2, Mic, MicOff, CheckCircle, Package, Loader2, AlertTriangle, X } from 'lucide-react';
+import { ShoppingCart, ChefHat, Search, ArrowLeft, Trash2, Mic, MicOff, CheckCircle, Package, Loader2, AlertTriangle, X, FileText, List } from 'lucide-react';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 // URL del Logo (Cámbiala aquí una sola vez)
 const BRAND_LOGO = "/logo.png";
@@ -62,12 +64,85 @@ const ConfirmationModal = ({ isOpen, onClose, onConfirm, title, message }) => {
     );
 };
 
+// --- COMPONENTE MODAL DE CARRITO (HU-006) ---
+const CartModal = ({ isOpen, onClose, cart, menuData, onAdd, onRemove, onClear, onConfirm }) => {
+    if (!isOpen) return null;
+
+    const cartItems = Object.entries(cart).map(([id, qty]) => {
+        const product = menuData.find(p => p.id === id);
+        return product ? { ...product, qty } : null;
+    }).filter(Boolean);
+
+    return (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 animate-in fade-in duration-200">
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose}></div>
+            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg flex flex-col max-h-[85vh] animate-in slide-in-from-bottom-10 duration-300">
+
+                {/* Header */}
+                <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50 rounded-t-2xl">
+                    <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
+                        <ShoppingCart className="text-blue-600" size={20} />
+                        Revisar Pedido
+                    </h3>
+                    <button onClick={onClose} className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                        <X size={20} className="text-gray-500" />
+                    </button>
+                </div>
+
+                {/* List */}
+                <div className="flex-1 overflow-y-auto p-4 space-y-3">
+                    {cartItems.length === 0 ? (
+                        <div className="text-center py-10 text-gray-400">
+                            <Package size={48} className="mx-auto mb-3 opacity-50" />
+                            <p>El carrito está vacío</p>
+                        </div>
+                    ) : (
+                        cartItems.map(item => (
+                            <div key={item.id} className="flex items-center justify-between bg-white border border-gray-100 p-3 rounded-xl shadow-sm">
+                                <div className="flex-1 min-w-0 pr-4">
+                                    <p className="font-bold text-gray-800 truncate">{item.name}</p>
+                                    <p className="text-xs text-gray-500">ID: {item.id}</p>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <button onClick={() => onRemove(item.id)} className="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-lg transition-colors font-bold">-</button>
+                                    <span className="w-6 text-center font-bold text-lg">{item.qty}</span>
+                                    <button onClick={() => onAdd(item.id)} className="w-8 h-8 flex items-center justify-center bg-blue-50 hover:bg-blue-100 text-blue-600 rounded-lg transition-colors font-bold">+</button>
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
+
+                {/* Footer */}
+                <div className="p-4 border-t border-gray-100 bg-gray-50 rounded-b-2xl space-y-3">
+                    {cartItems.length > 0 && (
+                        <button
+                            onClick={onClear}
+                            className="w-full py-2 text-red-500 text-sm font-medium hover:bg-red-50 rounded-lg transition-colors flex items-center justify-center gap-2"
+                        >
+                            <Trash2 size={16} /> Vaciar Todo
+                        </button>
+                    )}
+                    <button
+                        onClick={onConfirm}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2 transform active:scale-95 transition-all"
+                    >
+                        <ChefHat size={20} />
+                        CONFIRMAR Y COCINAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 export default function App() {
     const [cart, setCart] = useState({});
     const [searchTerm, setSearchTerm] = useState("");
     const [view, setView] = useState('dashboard');
     const [lastAdded, setLastAdded] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false); // HU-006
 
     // Estado para el Modal de Confirmación
     const [confirmModal, setConfirmModal] = useState({
@@ -223,6 +298,39 @@ export default function App() {
         }
     };
 
+    // --- HU-007: GENERACIÓN DE PDF ---
+    const handleDownloadPDF = () => {
+        const doc = new jsPDF();
+        const fecha = new Date().toLocaleString();
+
+        // Encabezado
+        doc.setFontSize(18);
+        doc.setTextColor(40);
+        doc.text("Desayunos del Cielo - Reporte de Producción", 14, 22);
+
+        doc.setFontSize(10);
+        doc.setTextColor(100);
+        doc.text(`Generado: ${fecha}`, 14, 30);
+
+        // Tabla
+        const tableData = productionList.map(item => [item.nombre, item.total]);
+
+        autoTable(doc, {
+            head: [['Insumo / Actividad', 'Cantidad Total']],
+            body: tableData,
+            startY: 35,
+            theme: 'striped',
+            headStyles: { fillColor: [41, 128, 185] },
+            styles: { fontSize: 10, cellPadding: 3 },
+        });
+
+        // Pie de página
+        const finalY = doc.lastAutoTable.finalY || 40;
+        doc.text(`Total Desayunos Vendidos: ${totalItems}`, 14, finalY + 10);
+
+        doc.save(`produccion_${Date.now()}.pdf`);
+    };
+
     // --- 3. LÓGICA DE CÁLCULO (KITCHEN) ---
     const productionList = useMemo(() => {
         const ingredientesTotales = {};
@@ -287,7 +395,13 @@ export default function App() {
                             onClick={() => switchView('dashboard')}
                             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-5 py-2.5 rounded-lg transition-all"
                         >
-                            <ArrowLeft size={18} /> Volver / Editar
+                            <ArrowLeft size={18} /> Volver
+                        </button>
+                        <button
+                            onClick={handleDownloadPDF}
+                            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg transition-all shadow-lg"
+                        >
+                            <FileText size={18} /> Descargar PDF
                         </button>
                     </header>
 
@@ -326,11 +440,11 @@ export default function App() {
                 </div>
             )}
 
-            {/* VISTA: DASHBOARD */}
+            {/* VISTA: DASHBOARD (HU-008: Slim Header & Compact UI) */}
             {view === 'dashboard' && (
                 <div className="min-h-screen bg-gray-50/50 font-sans pb-32">
                     <header className="bg-white sticky top-0 z-30 shadow-sm border-b border-gray-100 transition-all">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-auto sm:h-20 py-3 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div className="max-w-7xl mx-auto px-3 sm:px-4 h-auto sm:h-16 py-2 sm:py-0 flex flex-col sm:flex-row items-center justify-between gap-2">
 
                             <div className="w-full sm:w-auto flex justify-between items-center">
                                 <img src={BRAND_LOGO} alt="Logo Marca" className="h-10 object-contain opacity-90" />
@@ -354,8 +468,8 @@ export default function App() {
                                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-blue-500 transition-colors" size={20} />
                                     <input
                                         type="text"
-                                        placeholder="Buscar desayuno... o Dictar"
-                                        className="w-full pl-11 pr-4 py-3 rounded-full bg-gray-100 border border-transparent focus:bg-white focus:border-blue-200 focus:ring-4 focus:ring-blue-50 focus:outline-none transition-all"
+                                        placeholder="Buscar... o Dictar"
+                                        className="w-full pl-9 pr-4 py-2 rounded-full bg-gray-100 border border-transparent focus:bg-white focus:border-blue-200 focus:ring-4 focus:ring-blue-50 focus:outline-none transition-all text-sm"
                                         value={searchTerm}
                                         onChange={(e) => setSearchTerm(e.target.value)}
                                     />
@@ -363,7 +477,7 @@ export default function App() {
 
                                 <button
                                     onClick={toggleMic}
-                                    className={`p-3 rounded-full transition-all shadow-sm flex-shrink-0 relative
+                                    className={`p-2 rounded-full transition-all shadow-sm flex-shrink-0 relative
                     ${listening
                                             ? 'bg-red-50 text-red-600 ring-2 ring-red-100'
                                             : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
@@ -434,23 +548,23 @@ export default function App() {
                             )}
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4">
                             {filteredProducts.map(product => {
                                 const qty = cart[product.id] || 0;
                                 return (
-                                    <div key={product.id} className={`group relative bg-white rounded-2xl p-4 sm:p-5 border transition-all duration-200 flex flex-col justify-between min-h-[180px] ${qty > 0 ? 'border-blue-500 ring-4 ring-blue-50/50 shadow-lg' : 'border-gray-100 shadow-sm hover:shadow-md'}`}>
-                                        <div className="mb-3">
-                                            <div className="flex justify-between items-start mb-2">
-                                                <div className="bg-blue-50 text-blue-600 p-2 rounded-lg"><Package size={18} /></div>
-                                                {qty > 0 && <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">{qty}</span>}
+                                    <div key={product.id} className={`group relative bg-white rounded-xl p-3 border transition-all duration-200 flex flex-col justify-between min-h-[140px] ${qty > 0 ? 'border-blue-500 ring-2 ring-blue-50/50 shadow-md' : 'border-gray-100 shadow-sm hover:shadow-md'}`}>
+                                        <div className="mb-2">
+                                            <div className="flex justify-between items-start mb-1">
+                                                <div className="bg-blue-50 text-blue-600 p-1.5 rounded-lg"><Package size={16} /></div>
+                                                {qty > 0 && <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">{qty}</span>}
                                             </div>
-                                            <h3 className="font-bold text-gray-800 text-base sm:text-lg leading-snug group-hover:text-blue-600 transition-colors">{product.name}</h3>
+                                            <h3 className="font-bold text-gray-800 text-sm sm:text-base leading-tight group-hover:text-blue-600 transition-colors line-clamp-2">{product.name}</h3>
                                         </div>
 
-                                        <div className="mt-auto flex items-center bg-gray-50 rounded-xl p-1 gap-1 border border-gray-100">
-                                            <button onClick={() => handleRemove(product.id)} className={`w-10 h-10 flex items-center justify-center rounded-lg font-bold text-xl transition-all ${qty === 0 ? 'text-gray-300' : 'bg-white text-gray-700 shadow-sm hover:text-red-500 active:scale-90'}`} disabled={qty === 0}>-</button>
-                                            <div className="flex-1 text-center"><span className={`text-xl font-bold ${qty > 0 ? 'text-gray-900' : 'text-gray-300'}`}>{qty}</span></div>
-                                            <button onClick={() => handleAdd(product.id)} className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-700 font-bold text-xl active:scale-90 transition-all">+</button>
+                                        <div className="mt-auto flex items-center bg-gray-50 rounded-lg p-1 gap-1 border border-gray-100">
+                                            <button onClick={() => handleRemove(product.id)} className={`w-8 h-8 flex items-center justify-center rounded-md font-bold text-lg transition-all ${qty === 0 ? 'text-gray-300' : 'bg-white text-gray-700 shadow-sm hover:text-red-500 active:scale-90'}`} disabled={qty === 0}>-</button>
+                                            <div className="flex-1 text-center"><span className={`text-lg font-bold ${qty > 0 ? 'text-gray-900' : 'text-gray-300'}`}>{qty}</span></div>
+                                            <button onClick={() => handleAdd(product.id)} className="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 font-bold text-lg active:scale-90 transition-all">+</button>
                                         </div>
                                     </div>
                                 );
@@ -473,15 +587,33 @@ export default function App() {
                                 </div>
 
                                 <button
-                                    onClick={() => switchView('cocina')}
+                                    onClick={() => setIsCartOpen(true)}
                                     className="bg-blue-600 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 rounded-xl font-bold text-sm sm:text-base shadow-lg shadow-blue-600/30 flex items-center gap-2 transform active:scale-95 transition-all"
                                 >
-                                    <ChefHat size={18} />
-                                    <span className="hidden sm:inline">ENVIAR A</span> COCINA
+                                    <List size={18} />
+                                    <span className="hidden sm:inline">REVISAR</span> ({totalItems})
                                 </button>
                             </div>
                         </div>
                     )}
+
+                    {/* Cart Modal */}
+                    <CartModal
+                        isOpen={isCartOpen}
+                        onClose={() => setIsCartOpen(false)}
+                        cart={cart}
+                        menuData={menuData}
+                        onAdd={handleAdd}
+                        onRemove={handleRemove}
+                        onClear={() => {
+                            requestConfirmation('¿Vaciar todo?', 'Se borrarán todos los items.', clearCart);
+                            setIsCartOpen(false);
+                        }}
+                        onConfirm={() => {
+                            setIsCartOpen(false);
+                            switchView('cocina');
+                        }}
+                    />
 
 
                 </div>
