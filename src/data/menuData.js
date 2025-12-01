@@ -736,12 +736,6 @@ export const menuData = [
     "name": "DESAYUNO MI TIERRA",
     "ingredients": [
       {
-        "id": "ing_15",
-        "name": "BRAZO DE REINA MEDIANO",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
         "id": "ing_35",
         "name": "TAMAL TOLIMENSE",
         "qty": 1,
