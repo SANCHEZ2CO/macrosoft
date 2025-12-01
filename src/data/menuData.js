@@ -1,61 +1,61 @@
 export const menuData = [
   {
     "id": "prod_01",
-    "name": "BANDEJA PROMESAS MAMÁ",
+    "name": "BANDEJA PROMESAS MAMA",
     "ingredients": [
       {
         "id": "ing_01",
         "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
         "id": "ing_02",
         "name": "PARFAIT (YOGURT GRIEGO, MANGO, GRANOLA)",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
         "id": "ing_03",
         "name": "SANDWICH GRANOS DE POLLO",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
         "id": "ing_04",
-        "name": "PORCIÓN DE UVAS",
+        "name": "PORCION DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_02",
-    "name": "BANDEJA PROMESAS PAPÁ",
+    "name": "BANDEJA PROMESAS PAPA",
     "ingredients": [
       {
         "id": "ing_05",
-        "name": "TABLA DE CARNES MADURADAS-UVAS-FRESAS-QUESO",
+        "name": "TABLA DE CARNES MADURADAS - UVAS - FRESAS - QUESO",
         "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_03",
-        "name": "SANDWICH GRANOS DE POLLO",
-        "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
         "id": "ing_06",
-        "name": "JUGO DE NARANJA EN VASO PITILLO",
+        "name": "SANDWICH GRANOS DE POLLO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
         "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
+        "name": "JUGO DE NARANJA EN VASO PITILLO",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_08",
+        "name": "PORCION 6 MINI DONAS SALUDABLES",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -64,34 +64,28 @@ export const menuData = [
     "name": "FIT BRUNCH",
     "ingredients": [
       {
-        "id": "ing_03",
-        "name": "SANDWICH GRANOS DE POLLO",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
         "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
         "id": "ing_10",
-        "name": "PARFAIT NORMAL",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
         "id": "ing_11",
+        "name": "PARFAIT NORMAL",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_12",
         "name": "PARFAIT DE AVENA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -100,130 +94,112 @@ export const menuData = [
     "name": "MOSTACHO",
     "ingredients": [
       {
-        "id": "ing_04",
-        "name": "PORCIÓN DE UVAS",
+        "id": "ing_13",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
-        "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_01",
+        "id": "ing_14",
         "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_12",
-        "name": "PORCIÓN LECHONA",
+        "id": "ing_15",
+        "name": "PORCION LECHONA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_05",
-    "name": "DESAYUNO ORGÁNICO",
+    "name": "DESAYUNO ORGANICO",
     "ingredients": [
       {
-        "id": "ing_05",
-        "name": "TABLA DE CARNES MADURADAS-UVAS-FRESAS-QUESO",
+        "id": "ing_16",
+        "name": "SANDWICH GRANOS DE JAMON",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_13",
-        "name": "SANDWICH GRANOS DE JAMÓN",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_10",
+        "id": "ing_17",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_06",
-    "name": "BRUNCH SALUDABLE DE PROTEÍNA",
+    "name": "BRUNCH SALUDABLE DE PROTEINA",
     "ingredients": [
       {
-        "id": "ing_03",
-        "name": "SANDWICH GRANOS DE POLLO",
+        "id": "ing_18",
+        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
+        "id": "ing_19",
+        "name": "PORCION 6 MINI DONAS SALUDABLES",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_10",
+        "id": "ing_20",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_14",
-        "name": "LIMONADA DE COLÁGENO",
+        "id": "ing_21",
+        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_22",
+        "name": "LIMONADA DE COLAGENO",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_07",
-    "name": "MÁGICO DESPERTAR",
+    "name": "MAGICO DESPERTAR",
     "ingredients": [
       {
-        "id": "ing_06",
-        "name": "JUGO DE NARANJA EN VASO PITILLO",
+        "id": "ing_23",
+        "name": "BRAZO DE REINA  MEDIANO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_15",
-        "name": "BRAZO DE REINA MEDIANO",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_16",
+        "id": "ing_24",
         "name": "TAMAL EN PLATO DE PORCELANA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_01",
+        "id": "ing_25",
         "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_26",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_27",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       }
     ]
   },
@@ -232,40 +208,34 @@ export const menuData = [
     "name": "BOWL DE WAFFLES",
     "ingredients": [
       {
-        "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
+        "id": "ing_28",
+        "name": "SANDWICH GRANOS DE JAMON",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_13",
-        "name": "SANDWICH GRANOS DE JAMÓN",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_18",
+        "id": "ing_29",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_30",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_20",
+        "id": "ing_31",
         "name": "CUBIERTO DE MADERA",
         "qty": 1,
-        "category": "Acompañamientos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_21",
+        "id": "ing_32",
         "name": "PARFAIT PEQUEÑO",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -274,64 +244,64 @@ export const menuData = [
     "name": "LUJO PARA ELLA",
     "ingredients": [
       {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
+        "id": "ing_33",
+        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_22",
-        "name": "TOPPINGS PARA WAFFLE",
-        "qty": 14,
-        "category": "Repostería"
+        "id": "ing_34",
+        "name": "4 TOPPINGS PARA WAFFLE",
+        "qty": 1,
+        "category": "COCINA"
       },
       {
-        "id": "ing_11",
+        "id": "ing_35",
         "name": "PARFAIT DE AVENA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
+        "id": "ing_36",
+        "name": "PORCION 6 MINI DONAS SALUDABLES",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_10",
-    "name": "MÁGICO PARA ÉL",
+    "name": "MAGICO PARA EL",
     "ingredients": [
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
-        "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_16",
+        "id": "ing_37",
         "name": "TAMAL EN PLATO DE PORCELANA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_38",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_23",
-        "name": "MANTECADA TAMAÑO FAMILIAR",
+        "id": "ing_39",
+        "name": "MANTECADA TAMANO FAMILIAR",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_40",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_41",
+        "name": "PORCION DE FRUTA PICADA",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -340,64 +310,52 @@ export const menuData = [
     "name": "CAJA SALUDABLE",
     "ingredients": [
       {
-        "id": "ing_10",
+        "id": "ing_42",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_10",
-        "name": "PARFAIT NORMAL",
-        "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_12",
-    "name": "TÍPICO PARA ÉL",
+    "name": "TIPICO PARA EL",
     "ingredients": [
       {
-        "id": "ing_11",
-        "name": "PARFAIT DE AVENA",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_43",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_44",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_24",
-        "name": "PORCIÓN DE PAN",
+        "id": "ing_45",
+        "name": "PORCION DE PAN",
         "qty": 1,
-        "category": "Acompañamientos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_16",
+        "id": "ing_46",
         "name": "TAMAL EN PLATO DE PORCELANA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_47",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_48",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -406,28 +364,28 @@ export const menuData = [
     "name": "DULCE ENCANTO",
     "ingredients": [
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
-        "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_10",
+        "id": "ing_49",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_01",
+        "id": "ing_50",
         "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_26",
-        "name": "WAFFLES DE CHOCOLATE Y MANÍ",
+        "id": "ing_51",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_52",
+        "name": "WAFFLES DE CHOCOLATE Y MANI",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -436,28 +394,22 @@ export const menuData = [
     "name": "DESAYUNO MAGENTA",
     "ingredients": [
       {
-        "id": "ing_01",
-        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
-        "qty": 1,
-        "category": "Bebidas"
-      },
-      {
-        "id": "ing_17",
+        "id": "ing_53",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_54",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_55",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -466,22 +418,22 @@ export const menuData = [
     "name": "DESAYUNO CELESTE",
     "ingredients": [
       {
-        "id": "ing_10",
+        "id": "ing_56",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_27",
+        "id": "ing_57",
         "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_28",
+        "id": "ing_58",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       }
     ]
   },
@@ -490,28 +442,22 @@ export const menuData = [
     "name": "BRUNCH PARA DOS",
     "ingredients": [
       {
-        "id": "ing_13",
-        "name": "SANDWICH GRANOS DE JAMÓN",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_29",
+        "id": "ing_59",
         "name": "MINI TORTA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_05",
-        "name": "TABLA DE CARNES MADURADAS-UVAS-FRESAS-QUESO",
+        "id": "ing_60",
+        "name": "TABLA DE CARNES MADURADAS - UVAS - FRESAS - QUESO",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_61",
         "name": "QUESO PERA",
         "qty": 2,
-        "category": "Lácteos"
+        "category": "COCINA"
       }
     ]
   },
@@ -520,28 +466,22 @@ export const menuData = [
     "name": "ESPECIAL PARA ELLA",
     "ingredients": [
       {
-        "id": "ing_10",
-        "name": "PARFAIT NORMAL",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_62",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_18",
+        "id": "ing_63",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_30",
+        "id": "ing_64",
         "name": "PORCIÓN DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
@@ -550,70 +490,58 @@ export const menuData = [
     "name": "DESAYUNO HAPPY BIRTHDAY",
     "ingredients": [
       {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
+        "id": "ing_65",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
-        "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_28",
+        "id": "ing_66",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_67",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_68",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_19",
-    "name": "DESAYUNO FELIZ DÍA",
+    "name": "DESAYUNO FELIZ DIA",
     "ingredients": [
       {
-        "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
+        "id": "ing_69",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_70",
+        "name": "PORCION DE SALCHICHAS RANCHERAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_31",
-        "name": "PORCIÓN DE SALCHICHAS RANCHERAS",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_27",
+        "id": "ing_71",
         "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_72",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -622,40 +550,34 @@ export const menuData = [
     "name": "DESAYUNO CON AMOR",
     "ingredients": [
       {
-        "id": "ing_10",
-        "name": "PARFAIT NORMAL",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_28",
+        "id": "ing_73",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
+        "id": "ing_74",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_33",
+        "id": "ing_75",
         "name": "BON YURT",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_76",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_77",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -664,46 +586,40 @@ export const menuData = [
     "name": "DULCE DESPERTAR",
     "ingredients": [
       {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_78",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
+        "id": "ing_79",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_80",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_28",
+        "id": "ing_81",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_34",
+        "id": "ing_82",
         "name": "YOGURT ALPINA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_83",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -712,16 +628,10 @@ export const menuData = [
     "name": "CAJA SORPRESA",
     "ingredients": [
       {
-        "id": "ing_14",
-        "name": "LIMONADA DE COLÁGENO",
+        "id": "ing_84",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Bebidas"
-      },
-      {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
-        "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -730,34 +640,34 @@ export const menuData = [
     "name": "DESAYUNO MI TIERRA",
     "ingredients": [
       {
-        "id": "ing_35",
+        "id": "ing_85",
         "name": "TAMAL TOLIMENSE",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_24",
-        "name": "PORCIÓN DE PAN",
+        "id": "ing_86",
+        "name": "PORCION DE PAN",
         "qty": 1,
-        "category": "Acompañamientos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_87",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_88",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_89",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -766,34 +676,28 @@ export const menuData = [
     "name": "DESAYUNO MAÑANITAS",
     "ingredients": [
       {
-        "id": "ing_16",
-        "name": "TAMAL EN PLATO DE PORCELANA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_17",
+        "id": "ing_90",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_91",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
+        "id": "ing_92",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_93",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -802,16 +706,10 @@ export const menuData = [
     "name": "DESAYUNO LIGERO",
     "ingredients": [
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_94",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_01",
-        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
-        "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
@@ -820,16 +718,16 @@ export const menuData = [
     "name": "ANCHETA FRUTAL",
     "ingredients": [
       {
-        "id": "ing_27",
-        "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_01",
+        "id": "ing_95",
         "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_96",
+        "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -838,46 +736,40 @@ export const menuData = [
     "name": "CANASTA DE FRUTAS",
     "ingredients": [
       {
-        "id": "ing_17",
-        "name": "QUESO PERA",
-        "qty": 1,
-        "category": "Lácteos"
-      },
-      {
-        "id": "ing_30",
+        "id": "ing_97",
         "name": "PORCIÓN DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
+        "id": "ing_98",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_37",
+        "id": "ing_99",
         "name": "SKETOS YOGURT GRIEGO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_28",
-    "name": "ANCHETA ORGÁNICA",
+    "name": "ANCHETA ORGANICA",
     "ingredients": [
       {
-        "id": "ing_30",
+        "id": "ing_100",
         "name": "PORCIÓN DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
+        "id": "ing_101",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
@@ -886,76 +778,64 @@ export const menuData = [
     "name": "ESPIRAL FLORAL",
     "ingredients": [
       {
-        "id": "ing_30",
+        "id": "ing_102",
         "name": "PORCIÓN DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
+        "id": "ing_103",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_30",
-    "name": "ONCES SALUDABLES",
+    "name": "ONCES SALUDABES",
     "ingredients": [
       {
-        "id": "ing_19",
-        "name": "JUGO DE NARANJA",
-        "qty": 1,
-        "category": "Bebidas"
-      },
-      {
-        "id": "ing_10",
+        "id": "ing_104",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_105",
+        "name": "JUGO DE NARANJA",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_31",
-    "name": "ONCES MENÚ GOURMET",
+    "name": "ONCES MENU GOURMET",
     "ingredients": [
       {
-        "id": "ing_20",
-        "name": "CUBIERTO DE MADERA",
-        "qty": 1,
-        "category": "Acompañamientos"
-      },
-      {
-        "id": "ing_27",
+        "id": "ing_106",
         "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_107",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_32",
-    "name": "ONCES MENÚ DULCE MAÑANA",
+    "name": "ONCES MENU DULCE MAÑANA",
     "ingredients": [
       {
-        "id": "ing_21",
-        "name": "PARFAIT PEQUEÑO",
+        "id": "ing_108",
+        "name": "WAFFLES DE CHOCOLATE Y MANI",
         "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_26",
-        "name": "WAFFLES DE CHOCOLATE Y MANÍ",
-        "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -964,106 +844,82 @@ export const menuData = [
     "name": "ONCES PREMIUM CON CORONA",
     "ingredients": [
       {
-        "id": "ing_08",
-        "name": "WAFFLE BONO DE PROTEÍNA Y PAVO",
+        "id": "ing_109",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
-        "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_34",
-    "name": "ONCES MENÚ CON WAFFLES",
+    "name": "ONCES MENU CON WAFFLES",
     "ingredients": [
       {
-        "id": "ing_22",
-        "name": "TOPPINGS PARA WAFFLE",
-        "qty": 14,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_18",
+        "id": "ing_110",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_35",
-    "name": "MENÚ MINNIE FIT",
+    "name": "MENU MINNIE FIT",
     "ingredients": [
       {
-        "id": "ing_11",
-        "name": "PARFAIT DE AVENA",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_18",
+        "id": "ing_111",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_38",
+        "id": "ing_112",
         "name": "YOGURT YOX",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_113",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_114",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_115",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_36",
-    "name": "MENÚ STICH",
+    "name": "MENU STICH",
     "ingredients": [
       {
-        "id": "ing_07",
-        "name": "PORCIÓN 6 MINI DONAS SALUDABLES",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_17",
+        "id": "ing_116",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_39",
+        "id": "ing_117",
         "name": "WAFFLES HAWAII (FRESAS Y UCHUVAS)",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_40",
+        "id": "ing_118",
         "name": "LECHE EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
@@ -1072,88 +928,76 @@ export const menuData = [
     "name": "DESAYUNO BARBIE",
     "ingredients": [
       {
-        "id": "ing_16",
-        "name": "TAMAL EN PLATO DE PORCELANA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_40",
+        "id": "ing_119",
         "name": "LECHE EN ENVASE DE VIDRIO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_41",
-        "name": "PORCIÓN DE FRESAS Y ARÁNDANOS",
+        "id": "ing_120",
+        "name": "PORCION DE FRESAS Y ARANDANOS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_42",
+        "id": "ing_121",
         "name": "WAFFLES DE CHOCOLATE Y FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_38",
-    "name": "UNICORNIO CLÁSICO",
+    "name": "UNICORNIO CLASICO",
     "ingredients": [
       {
-        "id": "ing_19",
+        "id": "ing_122",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_123",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_28",
+        "id": "ing_124",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_33",
-        "name": "BON YURT",
+        "id": "ing_125",
+        "name": "BONYURT",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_39",
-    "name": "SÚPER HÉROE INFANTIL",
+    "name": "SUPER HEROE INFANTIL",
     "ingredients": [
       {
-        "id": "ing_23",
-        "name": "MANTECADA TAMAÑO FAMILIAR",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_126",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_42",
+        "id": "ing_127",
         "name": "WAFFLES DE CHOCOLATE Y FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
+        "id": "ing_128",
+        "name": "POSTRE DE MARACUYA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -1162,46 +1006,40 @@ export const menuData = [
     "name": "DESAYUNO PERSONAJE",
     "ingredients": [
       {
-        "id": "ing_17",
-        "name": "QUESO PERA",
+        "id": "ing_129",
+        "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_130",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_37",
+        "id": "ing_131",
         "name": "SKETOS YOGURT GRIEGO",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_33",
+        "id": "ing_132",
         "name": "BON YURT",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_133",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_28",
+        "id": "ing_134",
         "name": "ROLLITOS DE JAMÓN Y QUESO",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       }
     ]
   },
@@ -1210,40 +1048,34 @@ export const menuData = [
     "name": "DESAYUNO DINOSAURIO",
     "ingredients": [
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
-        "qty": 1,
-        "category": "Frutas"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_135",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_29",
+        "id": "ing_136",
         "name": "MINI TORTA",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
+        "id": "ing_137",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_33",
-        "name": "BON YURT",
+        "id": "ing_138",
+        "name": "BONYURT",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
+        "id": "ing_139",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       }
     ]
   },
@@ -1252,16 +1084,10 @@ export const menuData = [
     "name": "ANCHETA INFANTIL SALUDABLE",
     "ingredients": [
       {
-        "id": "ing_10",
-        "name": "PARFAIT NORMAL",
+        "id": "ing_140",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
-        "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   },
@@ -1270,22 +1096,16 @@ export const menuData = [
     "name": "BRUNCH DE COLORES",
     "ingredients": [
       {
-        "id": "ing_19",
-        "name": "JUGO DE NARANJA",
-        "qty": 1,
-        "category": "Bebidas"
-      },
-      {
-        "id": "ing_18",
+        "id": "ing_141",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_34",
+        "id": "ing_142",
         "name": "YOGURT ALPINA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
@@ -1294,40 +1114,34 @@ export const menuData = [
     "name": "BRUNCH DE COLORES SALUDABLE",
     "ingredients": [
       {
-        "id": "ing_18",
+        "id": "ing_143",
         "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_144",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_45",
-    "name": "DESAYUNO DISNEY (MINNI Y MICKEY)",
+    "name": "DESAYUNO DISNEY - (MINNI Y MICKEY)",
     "ingredients": [
       {
-        "id": "ing_09",
-        "name": "PORCIÓN DE FRUTA PICADA",
+        "id": "ing_145",
+        "name": "SANDWICH TIPO CUBANO DE JAMON Y LECHUGA",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_32",
-        "name": "SANDWICH TIPO CUBANO DE JAMÓN Y LECHUGA",
+        "id": "ing_146",
+        "name": "BONYURT",
         "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_33",
-        "name": "BON YURT",
-        "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
@@ -1336,34 +1150,28 @@ export const menuData = [
     "name": "UNICORNIO PREMIUM",
     "ingredients": [
       {
-        "id": "ing_24",
-        "name": "PORCIÓN DE PAN",
-        "qty": 1,
-        "category": "Acompañamientos"
-      },
-      {
-        "id": "ing_27",
+        "id": "ing_147",
         "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_148",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_10",
+        "id": "ing_149",
         "name": "PARFAIT NORMAL",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_150",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       }
     ]
   },
@@ -1372,52 +1180,40 @@ export const menuData = [
     "name": "DESAYUNO NIÑO SOÑADOR",
     "ingredients": [
       {
-        "id": "ing_16",
-        "name": "TAMAL EN PLATO DE PORCELANA",
+        "id": "ing_151",
+        "name": "SANDWICH GRANOS DE JAMON",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_13",
-        "name": "SANDWICH GRANOS DE JAMÓN",
-        "qty": 1,
-        "category": "Platos Fuertes"
-      },
-      {
-        "id": "ing_19",
+        "id": "ing_152",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_38",
+        "id": "ing_153",
         "name": "YOGURT YOX",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
       }
     ]
   },
   {
     "id": "prod_48",
-    "name": "ONCES DE PAPÁ",
+    "name": "ONCES DE PAPA",
     "ingredients": [
       {
-        "id": "ing_17",
-        "name": "QUESO PERA",
-        "qty": 1,
-        "category": "Lácteos"
-      },
-      {
-        "id": "ing_43",
+        "id": "ing_154",
         "name": "CROISSANT CON CARNES MADURADAS",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_21",
+        "id": "ing_155",
         "name": "PARFAIT PEQUEÑO",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       }
     ]
   },
@@ -1426,34 +1222,34 @@ export const menuData = [
     "name": "FAVORITO PARA ELLOS",
     "ingredients": [
       {
-        "id": "ing_25",
-        "name": "POSTRE DE MARACUYÁ",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_35",
+        "id": "ing_156",
         "name": "TAMAL TOLIMENSE",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_24",
-        "name": "PORCIÓN DE PAN",
+        "id": "ing_157",
+        "name": "PORCION DE PAN",
         "qty": 1,
-        "category": "Acompañamientos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_17",
+        "id": "ing_158",
         "name": "QUESO PERA",
         "qty": 1,
-        "category": "Lácteos"
+        "category": "COCINA"
       },
       {
-        "id": "ing_19",
+        "id": "ing_159",
         "name": "JUGO DE NARANJA",
         "qty": 1,
-        "category": "Bebidas"
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_160",
+        "name": "POSTRE DE MARACUYA",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -1462,34 +1258,28 @@ export const menuData = [
     "name": "BRUNCH DELUXE",
     "ingredients": [
       {
-        "id": "ing_10",
-        "name": "PARFAIT NORMAL",
-        "qty": 1,
-        "category": "Repostería"
-      },
-      {
-        "id": "ing_43",
+        "id": "ing_161",
         "name": "CROISSANT CON CARNES MADURADAS",
         "qty": 1,
-        "category": "Platos Fuertes"
+        "category": "COCINA"
       },
       {
-        "id": "ing_44",
+        "id": "ing_162",
         "name": "COPA DE VIDRIO CON PARFAIT",
         "qty": 1,
-        "category": "Repostería"
+        "category": "COCINA"
       },
       {
-        "id": "ing_36",
-        "name": "PORCIÓN DE FRESAS",
+        "id": "ing_163",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       },
       {
-        "id": "ing_30",
+        "id": "ing_164",
         "name": "PORCIÓN DE UVAS CHILENAS",
         "qty": 1,
-        "category": "Frutas"
+        "category": "COCINA"
       }
     ]
   }
