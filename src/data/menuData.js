@@ -154,12 +154,6 @@ export const menuData = [
         "category": "COCINA"
       },
       {
-        "id": "ing_21",
-        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
-        "qty": 1,
-        "category": "COCINA"
-      },
-      {
         "id": "ing_22",
         "name": "LIMONADA DE COLAGENO",
         "qty": 1,
