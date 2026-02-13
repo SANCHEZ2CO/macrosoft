@@ -1276,5 +1276,35 @@ export const menuData = [
         "category": "COCINA"
       }
     ]
+  },
+  {
+    "id": "prod_51",
+    "name": "BANDEJA FLORK",
+    "ingredients": [
+      {
+        "id": "ing_165",
+        "name": "SANDWICH DE POLLO FLORK",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_166",
+        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_167",
+        "name": "WAFFLES CON FRUTOS ROJOS (FRESA Y MIEL)",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_168",
+        "name": "PORCION DE FRUTA PICADA",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
   }
 ];
