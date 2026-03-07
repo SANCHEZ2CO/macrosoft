@@ -557,7 +557,7 @@ export const menuData = [
       },
       {
         "id": "ing_75",
-        "name": "BON YURT",
+        "name": "BONYURT",
         "qty": 1,
         "category": "COCINA"
       },
@@ -1019,7 +1019,7 @@ export const menuData = [
       },
       {
         "id": "ing_132",
-        "name": "BON YURT",
+        "name": "BONYURT",
         "qty": 1,
         "category": "COCINA"
       },
