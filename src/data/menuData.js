@@ -1348,5 +1348,41 @@ export const menuData = [
         "category": "COCINA"
       }
     ]
+  },
+  {
+    "id": "prod_53",
+    "name": "MUJER MARAVILLOSA",
+    "ingredients": [
+      {
+        "id": "ing_175",
+        "name": "SANDWICH GRANOS DE JAMON",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_176",
+        "name": "JUGO DE NARANJA",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_177",
+        "name": "PORCION DE FRESAS",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_178",
+        "name": "TORTA DE VINO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_179",
+        "name": "COPA DE VIDRIO CON UVAS",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
   }
 ];
