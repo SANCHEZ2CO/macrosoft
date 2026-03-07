@@ -239,7 +239,7 @@ export const menuData = [
     "ingredients": [
       {
         "id": "ing_33",
-        "name": "WAFFLE BONO DE PROTEINA Y PAVO",
+        "name": "WAFFLES SALUDABLES DE FRESA",
         "qty": 1,
         "category": "COCINA"
       },
@@ -1302,6 +1302,48 @@ export const menuData = [
       {
         "id": "ing_168",
         "name": "PORCION DE FRUTA PICADA",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_52",
+    "name": "BANDEJA VINTAGE",
+    "ingredients": [
+      {
+        "id": "ing_169",
+        "name": "SANDWICH DE POLLO (OREGANO)",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_170",
+        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_171",
+        "name": "PARFAIT PEQUEÑO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_172",
+        "name": "PORCION DE FRUTA PICADA",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_173",
+        "name": "POSTRE DE MARACUYA",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_174",
+        "name": "CARNES MADURADAS CON ARANDANOS",
         "qty": 1,
         "category": "COCINA"
       }
