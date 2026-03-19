@@ -818,6 +818,12 @@ export const menuData = [
         "name": "PORCION DE FRUTA PICADA",
         "qty": 1,
         "category": "COCINA"
+      },
+      {
+        "id": "ing_189",
+        "name": "JUGO DE NARANJA",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -1380,6 +1386,78 @@ export const menuData = [
       {
         "id": "ing_179",
         "name": "COPA DE VIDRIO CON UVAS",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_54",
+    "name": "DESAYUNO ESTRELLA",
+    "ingredients": [
+      {
+        "id": "ing_180",
+        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_181",
+        "name": "CROISSANT DE JAMON PIETRAN Y QUESO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_182",
+        "name": "PORCION DE UVAS Y FRESAS",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_183",
+        "name": "POSTRE DE MARACUYA",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_55",
+    "name": "ONCES HOTWHEELS",
+    "ingredients": [
+      {
+        "id": "ing_184",
+        "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_56",
+    "name": "DESAYUNO MUNDIAL",
+    "ingredients": [
+      {
+        "id": "ing_185",
+        "name": "SANDWICH DE POLLO (OREGANO)",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_186",
+        "name": "JUGO DE NARANJA EN ENVASE DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_187",
+        "name": "MILOHA ARTESANAL",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_188",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
         "category": "COCINA"
       }
