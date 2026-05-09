@@ -77,13 +77,13 @@ export const menuData = [
       },
       {
         "id": "ing_11",
-        "name": "PARFAIT NORMAL",
+        "name": "PARFAIT EN VASO DE VIDRIO",
         "qty": 1,
         "category": "COCINA"
       },
       {
         "id": "ing_12",
-        "name": "PARFAIT DE AVENA",
+        "name": "PARFAIT DE AVENA EN VASO DE VIDRIO",
         "qty": 1,
         "category": "COCINA"
       }
@@ -245,13 +245,13 @@ export const menuData = [
       },
       {
         "id": "ing_34",
-        "name": "4 TOPPINGS PARA WAFFLE",
+        "name": "PARFAIT PEQUEÑO",
         "qty": 1,
         "category": "COCINA"
       },
       {
         "id": "ing_35",
-        "name": "PARFAIT DE AVENA",
+        "name": "PARFAIT DE AVENA EN VASO DE VIDRIO",
         "qty": 1,
         "category": "COCINA"
       },
@@ -1457,6 +1457,54 @@ export const menuData = [
       },
       {
         "id": "ing_188",
+        "name": "PORCION DE FRESAS",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_57",
+    "name": "ESENCIA MAMA",
+    "ingredients": [
+      {
+        "id": "ing_189",
+        "name": "JUGO VERDE DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_190",
+        "name": "SANDWICH DE POLLO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_191",
+        "name": "PARFAIT DE AVENA EN VASO DE VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_58",
+    "name": "BANDEJA FE",
+    "ingredients": [
+      {
+        "id": "ing_192",
+        "name": "SANDWICH DE POLLO (OREGANO)",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_193",
+        "name": "YOGURT EN VIDRIO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_194",
         "name": "PORCION DE FRESAS",
         "qty": 1,
         "category": "COCINA"
