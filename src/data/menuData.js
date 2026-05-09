@@ -1493,7 +1493,7 @@ export const menuData = [
       },
       {
         "id": "ing_190",
-        "name": "SANDWICH DE POLLO",
+        "name": "SANDWICH EN MASA MADRE",
         "qty": 1,
         "category": "COCINA"
       },
