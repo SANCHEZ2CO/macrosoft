@@ -260,6 +260,12 @@ export const menuData = [
         "name": "PORCION 6 MINI DONAS SALUDABLES",
         "qty": 1,
         "category": "COCINA"
+      },
+      {
+        "id": "ing_195",
+        "name": "COPA DE VIDRIO CON UVAS",
+        "qty": 1,
+        "category": "COCINA"
       }
     ]
   },
@@ -720,6 +726,18 @@ export const menuData = [
       {
         "id": "ing_96",
         "name": "SANDWICH TIPO CUBANO DE POLLO Y LECHUGA",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_196",
+        "name": "PORCIÓN DE UVAS CHILENAS",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_197",
+        "name": "PORCION DE FRESAS",
         "qty": 1,
         "category": "COCINA"
       }
@@ -1506,6 +1524,24 @@ export const menuData = [
       {
         "id": "ing_194",
         "name": "PORCION DE FRESAS",
+        "qty": 1,
+        "category": "COCINA"
+      }
+    ]
+  },
+  {
+    "id": "prod_59",
+    "name": "DULCE MAMA",
+    "ingredients": [
+      {
+        "id": "ing_198",
+        "name": "SANDWICH GRANOS DE POLLO",
+        "qty": 1,
+        "category": "COCINA"
+      },
+      {
+        "id": "ing_199",
+        "name": "PARFAIT EN VASO DE VIDRIO",
         "qty": 1,
         "category": "COCINA"
       }
